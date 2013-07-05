@@ -1,5 +1,9 @@
 # ntap.coffee -- binding on nth tap
 
+## Introduction
+
+ntap.coffee is a library enabling you to bind on single tap, double tap, treble tap, quadruple tap or even n times tap.
+
 ## Usage
 
 ```javascript
@@ -11,7 +15,7 @@ $('body').on('tap5', function(){
     alert("5th tap");
 });
 ```
-## Licesing
+## Licensing
 
 Licensed under the MIT license.
 
