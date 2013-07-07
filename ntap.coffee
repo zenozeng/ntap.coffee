@@ -1,4 +1,5 @@
-end = move = start = count = timeout = null
+end = move = start = {}
+count = timeout = null
 
 document.addEventListener 'touchstart', (event) ->
   start = event
