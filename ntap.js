@@ -2,7 +2,9 @@
 (function() {
   var count, end, move, start, timeout;
 
-  end = move = start = count = timeout = null;
+  end = move = start = {};
+
+  count = timeout = null;
 
   document.addEventListener('touchstart', function(event) {
     start = event;
