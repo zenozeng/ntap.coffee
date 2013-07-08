@@ -14,5 +14,6 @@ document.addEventListener 'touchend', (event) ->
   return if end.timeStamp - start.timeStamp < 1 # invalid tap
   return if end.timeStamp - start.timeStamp > 600 # holding
   return if move.timeStamp > start.timeStamp # move
-  fn = -> start.target.dispatchEvent(new CustomEvent("tap"+count))
+  event = new CustomEvent("tap"+count, {bubbles: true, cancelable: true})
+  fn = -> start.target.dispatchEvent(event)
   timeout = setTimeout fn, 300
