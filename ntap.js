@@ -33,8 +33,12 @@
     if (move.timeStamp > start.timeStamp) {
       return;
     }
+    event = new CustomEvent("tap" + count, {
+      bubbles: true,
+      cancelable: true
+    });
     fn = function() {
-      return start.target.dispatchEvent(new CustomEvent("tap" + count));
+      return start.target.dispatchEvent(event);
     };
     return timeout = setTimeout(fn, 300);
   });
